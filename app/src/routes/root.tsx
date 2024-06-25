@@ -41,7 +41,7 @@ export default function Root() {
   if (!data) return <p>Erreur lors du chargement des cartes cadeaux</p>;
   return (
     <div className="mx-auto w-full max-w-7xl space-y-6 p-4 sm:p-10">
-      <h1 className="text-xl font-semibold md:text-2xl">Cartes cadeaux</h1>
+      <h1 className="text-xl font-semibold sm:text-2xl">Cartes cadeaux</h1>
       <div className="w-full border-b border-slate-300">
         <button
           className={cn('h-full px-4 py-2', {
