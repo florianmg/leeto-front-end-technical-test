@@ -9,13 +9,13 @@ const alertProps = {
 };
 
 describe('ProgressBar', () => {
-  const { container, getByText } = render(<Alert {...alertProps} />);
-
   it('should renders without crashing', () => {
+    const { container } = render(<Alert {...alertProps} />);
     expect(container).toBeTruthy();
   });
 
   it('should display the title and message', () => {
+    const { getByText } = render(<Alert {...alertProps} />);
     expect(getByText(alertProps.title)).toBeTruthy();
     expect(getByText(alertProps.message)).toBeTruthy();
   });
