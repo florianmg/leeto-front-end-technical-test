@@ -1,5 +1,5 @@
 function App() {
-  return <main>App.tsx</main> 
+  return <main>App.tsx</main>;
 }
 
-export default App
+export default App;
