@@ -1,3 +1,4 @@
+import { useNavigation } from '@/hooks/useNavigation';
 import { ProgressBar } from '@/components/common/ProgressBar';
 import { getTimeLeft } from '@/utils/getTimeLeft';
 
@@ -9,11 +10,18 @@ export const Card = ({
   closingDate,
   consumedAmount,
   name,
+  id,
 }: CardProps) => {
+  const { redirectToGiftCardDetails } = useNavigation();
   const timeLeft = getTimeLeft(closingDate);
-
+  const onClickCard = () => {
+    redirectToGiftCardDetails(id);
+  };
   return (
-    <div className="w-full space-y-4 rounded-xl border border-slate-300 p-6">
+    <div
+      className="w-full cursor-pointer space-y-4 rounded-xl border border-slate-300 p-6"
+      onClick={onClickCard}
+    >
       <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-pink-100">
         <img
           className="h-4 w-4 object-contain"

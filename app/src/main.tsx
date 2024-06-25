@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
 
 import Root from '@/routes/root';
+import DetailsPage from './routes/details';
 
 import '@/index.css';
 
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <Root />,
+  },
+  {
+    path: '/details/:id',
+    element: <DetailsPage />,
   },
 ]);
 
