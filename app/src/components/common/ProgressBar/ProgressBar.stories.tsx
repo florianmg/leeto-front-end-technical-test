@@ -21,7 +21,7 @@ export const HalfFull: Story = {
   },
 };
 
-export const full: Story = {
+export const Full: Story = {
   args: {
     progress: 100,
   },
