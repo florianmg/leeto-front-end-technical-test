@@ -44,7 +44,7 @@ export default function Root() {
       <h1 className="text-xl font-semibold sm:text-2xl">Cartes cadeaux</h1>
       <div className="w-full border-b border-slate-300">
         <button
-          className={cn('h-full px-4 py-2', {
+          className={cn('h-full w-1/2 px-4 py-2 sm:w-auto', {
             'border-b-2 border-b-blue text-blue': state === 'active',
           })}
           onClick={() => onClickTab('active')}
@@ -52,7 +52,7 @@ export default function Root() {
           Actives ({activeGiftCards.length})
         </button>
         <button
-          className={cn('h-full px-4 py-2', {
+          className={cn('h-full w-1/2 px-4 py-2 sm:w-auto', {
             'border-b-2 border-b-blue text-blue': state === 'archived',
           })}
           onClick={() => onClickTab('archived')}
