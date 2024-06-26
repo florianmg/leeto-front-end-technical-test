@@ -11,18 +11,21 @@ type Story = StoryObj<typeof ProgressBar>;
 
 export const Empty: Story = {
   args: {
-    progress: 0,
+    consumedAmount: 0,
+    allowedAmount: 100,
   },
 };
 
 export const HalfFull: Story = {
   args: {
-    progress: 50,
+    consumedAmount: 50,
+    allowedAmount: 100,
   },
 };
 
 export const Full: Story = {
   args: {
-    progress: 100,
+    consumedAmount: 100,
+    allowedAmount: 100,
   },
 };

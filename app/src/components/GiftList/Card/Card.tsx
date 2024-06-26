@@ -31,10 +31,10 @@ export const Card = ({
           <p className="font-medium">{name}</p>
         </div>
         <div className="space-y-1">
-          <p className="text-xs text-slate-600">
-            {consumedAmount} € dépensés / {allowedAmount} €
-          </p>
-          <ProgressBar progress={(consumedAmount / allowedAmount) * 100} />
+          <ProgressBar
+            consumedAmount={consumedAmount}
+            allowedAmount={allowedAmount}
+          />
         </div>
       </div>
     </div>

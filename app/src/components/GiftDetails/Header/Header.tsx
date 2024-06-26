@@ -40,9 +40,9 @@ export const Header = ({
           <p className="text-xs sm:text-sm">disponibles</p>
         </div>
         <div className="w-full max-w-[370px]">
-          <p className="text-xs text-slate-600">{`${consumedAmount} € dépensés / ${allowedAmount} €`}</p>
           <ProgressBar
-            progress={Math.floor((consumedAmount / allowedAmount) * 100)}
+            consumedAmount={consumedAmount}
+            allowedAmount={allowedAmount}
           />
         </div>
       </div>

@@ -1,3 +1,4 @@
 export type ProgressBarProps = {
-  progress: number;
+  allowedAmount: number;
+  consumedAmount: number;
 };
