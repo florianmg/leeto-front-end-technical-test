@@ -1,3 +1,5 @@
+import { parseISO, format } from 'date-fns';
+
 import { ProgressBar } from '@/components/common/ProgressBar';
 import { buildPassedTimeString, buildRemainingTimeString } from '@/utils/dates';
 
@@ -7,6 +9,7 @@ import GiftCardIcon from '@/assets/icons/gift-card.svg?react';
 
 import { HeaderProps } from './types';
 import { useMemo } from 'react';
+import { fr } from 'date-fns/locale/fr';
 
 export const Header = ({
   allowedAmount,
@@ -17,10 +20,24 @@ export const Header = ({
   state,
 }: HeaderProps) => {
   const closingText = useMemo(() => {
-    console.log('state', state);
     if (state === 'archived') return buildPassedTimeString(closingDate);
     return buildRemainingTimeString(closingDate);
   }, [closingDate, state]);
+
+  const formattedOpeningDate = useMemo(
+    () =>
+      format(parseISO(openingDate), 'd MMM yyyy', {
+        locale: fr,
+      }),
+    [openingDate]
+  );
+  const formattedClosingDate = useMemo(
+    () =>
+      format(parseISO(closingDate), 'd MMM yyyy', {
+        locale: fr,
+      }),
+    [closingDate]
+  );
 
   return (
     <div>
@@ -34,7 +51,7 @@ export const Header = ({
           <p className="flex items-center gap-x-1">
             <CalendarIcon className="size-[14px] fill-current" />
             <span>
-              {openingDate} - {closingDate}
+              {formattedOpeningDate} - {formattedClosingDate}
             </span>
           </p>
           <p className="flex items-center gap-x-1">
