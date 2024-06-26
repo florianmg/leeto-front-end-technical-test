@@ -16,7 +16,7 @@ export const ProgressBar = ({
   }, [allowedAmount, consumedAmount]);
   return (
     <div className="space-y-1">
-      <p className="text-xs text-slate-600">{label}</p>
+      {label && <p className="text-xs text-slate-600">{label}</p>}
       <div className="flex items-center gap-x-2">
         <div className="h-1.5 w-full rounded-md bg-slate-300">
           <div
