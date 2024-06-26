@@ -1,4 +1,4 @@
-import ArrowLeftIcon from '@/assets/arrow-left.svg?react';
+import ArrowLeftIcon from '@/assets/icons/arrow-left.svg?react';
 import { BackButtonProps } from './types';
 
 export const BackButton = ({ onClick, label }: BackButtonProps) => {

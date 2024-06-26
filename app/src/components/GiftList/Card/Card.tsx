@@ -2,7 +2,7 @@ import { useNavigation } from '@/hooks/useNavigation';
 import { ProgressBar } from '@/components/common/ProgressBar';
 import { getTimeLeft } from '@/utils/getTimeLeft';
 
-import GiftCardIcon from '@/assets/card_giftcard.svg';
+import GiftCardIcon from '@/assets/icons/gift-card.svg?react';
 import { CardProps } from './types';
 
 export const Card = ({
@@ -23,11 +23,7 @@ export const Card = ({
       onClick={onClickCard}
     >
       <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-pink-100">
-        <img
-          className="h-4 w-4 object-contain"
-          src={GiftCardIcon}
-          alt="Gift card icon"
-        />
+        <GiftCardIcon className="fill-pink-800" />
       </div>
       <div className="space-y-2">
         <div>
