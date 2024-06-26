@@ -1,11 +1,11 @@
 import { describe, expect, it } from 'vitest';
 import { render } from '@testing-library/react';
 
-import { ConsumptionCard } from './ConsumptionCard';
+import { BenificiaryList } from './BenificiaryList';
 
-import { ConsumptionCardProps } from './types';
+import { BenificiaryListProps } from './types';
 
-const consumptionCardProps: ConsumptionCardProps = {
+const benificiaryListProps: BenificiaryListProps = {
   beneficiaries: [
     {
       id: 1,
@@ -39,7 +39,7 @@ const consumptionCardProps: ConsumptionCardProps = {
 
 describe('ConsumptionCard', () => {
   it('should render without crashing', () => {
-    const { container } = render(<ConsumptionCard {...consumptionCardProps} />);
+    const { container } = render(<BenificiaryList {...benificiaryListProps} />);
     expect(container).toBeTruthy();
   });
 });

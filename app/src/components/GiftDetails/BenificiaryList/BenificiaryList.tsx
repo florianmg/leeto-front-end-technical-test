@@ -1,8 +1,8 @@
-import { ConsumptionCardProps } from './types';
+import { BenificiaryListProps } from './types';
 import { BenificiariesIcon } from '@/components/common/BenificiariesIcon';
 import FamilyIcon from '@/assets/icons/family.svg?react';
 
-export const ConsumptionCard = ({ beneficiaries }: ConsumptionCardProps) => (
+export const BenificiaryList = ({ beneficiaries }: BenificiaryListProps) => (
   <div className="w-full rounded-lg border p-4">
     <div className="flex size-8 items-center justify-center rounded-lg bg-green-100">
       <FamilyIcon className="size-3.5 fill-green-800" />

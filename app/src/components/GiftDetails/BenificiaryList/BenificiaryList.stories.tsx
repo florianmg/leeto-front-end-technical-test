@@ -1,13 +1,13 @@
 import { Meta, StoryObj } from '@storybook/react';
 
-import { ConsumptionCard } from './ConsumptionCard';
+import { BenificiaryList } from './BenificiaryList';
 
 export default {
-  title: 'GiftDetails/Consumption',
-  component: ConsumptionCard,
+  title: 'GiftDetails/BenificiaryList',
+  component: BenificiaryList,
 } as Meta;
 
-type Story = StoryObj<typeof ConsumptionCard>;
+type Story = StoryObj<typeof BenificiaryList>;
 
 export const Default: Story = {
   args: {

@@ -1,5 +1,5 @@
 import { Gift } from '@/types';
 
-export type ConsumptionCardProps = {
+export type BenificiaryListProps = {
   beneficiaries: Gift['beneficiaries'];
 };
