@@ -4,11 +4,13 @@ import {
   differenceInWeeks,
   differenceInYears,
   parseISO,
+  startOfDay,
 } from 'date-fns';
 
 export const buildRemainingTimeString = (closingDate: string) => {
-  const closeDate = parseISO(closingDate);
-  const today = new Date();
+  const closeDate = startOfDay(parseISO(closingDate));
+  const today = startOfDay(new Date());
+
   const daysUntilClose = differenceInDays(closeDate, today);
 
   if (daysUntilClose < 7) {
@@ -30,8 +32,8 @@ export const buildRemainingTimeString = (closingDate: string) => {
 };
 
 export const buildPassedTimeString = (closingDate: string) => {
-  const closeDate = parseISO(closingDate);
-  const today = new Date();
+  const closeDate = startOfDay(parseISO(closingDate));
+  const today = startOfDay(new Date());
   const daysSinceClose = differenceInDays(today, closeDate);
 
   if (daysSinceClose < 7) {
