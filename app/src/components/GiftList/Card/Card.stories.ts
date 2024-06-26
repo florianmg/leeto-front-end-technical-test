@@ -1,10 +1,12 @@
 import { Meta, StoryObj } from '@storybook/react';
+import { withRouter } from 'storybook-addon-remix-react-router';
 
 import { Card } from './Card';
 
 export default {
   title: 'GiftList/Card',
   component: Card,
+  decorators: [withRouter],
 } as Meta;
 
 type Story = StoryObj<typeof Card>;
