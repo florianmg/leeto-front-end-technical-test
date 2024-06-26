@@ -16,6 +16,7 @@ export const Default: Story = {
     allowedAmount: 100,
     consumedAmount: 50,
     closingDate: '2025-05-01',
+    openingDate: '2024-05-01',
     beneficiaries: [
       {
         id: 1,
