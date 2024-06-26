@@ -8,8 +8,8 @@ const benificiariesIconsMap: BenificiariesIconsMap = {
 
 export const BenificiariesIcon = ({ type }: BenificiariesIconProps) => {
   return (
-    <div className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-white bg-slate-100">
-      {benificiariesIconsMap[type]}
+    <div className="flex size-8 items-center justify-center rounded-full border-2 border-white bg-slate-100">
+      <span className="text-[10px]"> {benificiariesIconsMap[type]}</span>
     </div>
   );
 };
