@@ -1,0 +1,1 @@
+export { BenificiaryList } from './BenificiaryList';

@@ -1,5 +1,16 @@
 # Leeto - Test technique développeur front-end
 
+
+## Démarrer le livrable
+```sh
+git clone git@github.com:florianmg/leeto-front-end-technical-test.git
+cd leeto-front-end-technical-test
+npm run boot
+```
+Il y a aussi un storybook disponible dans app :
+```sh
+npm run storybook --prefix ./app
+```
 ## Introduction
 
 Dans l'application Leeto, nos utilisateurs peuvent consulter différentes cartes cadeaux mises à leur disposition par leur CSE.
