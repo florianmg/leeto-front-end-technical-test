@@ -34,6 +34,7 @@ export const Card = ({
           <ProgressBar
             consumedAmount={consumedAmount}
             allowedAmount={allowedAmount}
+            label={`${consumedAmount} € dépensés / ${allowedAmount} €`}
           />
         </div>
       </div>

@@ -43,6 +43,7 @@ export const Header = ({
           <ProgressBar
             consumedAmount={consumedAmount}
             allowedAmount={allowedAmount}
+            label={`${consumedAmount} € dépensés / ${allowedAmount} €`}
           />
         </div>
       </div>

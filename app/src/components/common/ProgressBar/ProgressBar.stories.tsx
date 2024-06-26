@@ -16,6 +16,14 @@ export const Empty: Story = {
   },
 };
 
+export const WithLabel: Story = {
+  args: {
+    consumedAmount: 90,
+    allowedAmount: 100,
+    label: 'Progress is 90%',
+  },
+};
+
 export const HalfFull: Story = {
   args: {
     consumedAmount: 50,
