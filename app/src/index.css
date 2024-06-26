@@ -5,6 +5,6 @@
 @tailwind utilities;
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter Variable', sans-serif;
   @apply text-slate-800;
 }
