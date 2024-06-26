@@ -11,6 +11,7 @@ const cardProps: CardProps = {
   closingDate: '2025-05-10',
   consumedAmount: 50,
   name: 'Gift card',
+  state: 'active',
 };
 
 describe('Card', () => {

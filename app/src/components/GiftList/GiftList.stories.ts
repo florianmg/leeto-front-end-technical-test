@@ -19,6 +19,7 @@ export const Default: Story = {
         allowedAmount: 100,
         consumedAmount: 50,
         closingDate: '2025-05-01',
+        state: 'active',
       },
       {
         id: 2,
@@ -26,6 +27,7 @@ export const Default: Story = {
         allowedAmount: 100,
         consumedAmount: 50,
         closingDate: '2025-05-01',
+        state: 'active',
       },
     ],
   },

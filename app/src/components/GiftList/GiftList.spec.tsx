@@ -13,6 +13,7 @@ const giftListProps: GiftListProps = {
       closingDate: '2025-05-10',
       consumedAmount: 50,
       name: 'Gift card',
+      state: 'active',
     },
     {
       id: 2,
@@ -20,6 +21,7 @@ const giftListProps: GiftListProps = {
       closingDate: '2025-05-10',
       consumedAmount: 100,
       name: 'Gift card 2',
+      state: 'active',
     },
   ],
 };
