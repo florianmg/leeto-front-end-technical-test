@@ -3,8 +3,9 @@
 
 ## Démarrer le livrable
 ```sh
-git clone git@github.com:florianmg/leeto-front-end-technical-test.git
+git clone https://github.com/florianmg/leeto-front-end-technical-test.git
 cd leeto-front-end-technical-test
+Dans le dossier app rennommer le fichier .env.example en .env.local
 npm run boot
 ```
 Il y a aussi un storybook disponible dans app :
