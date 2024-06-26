@@ -42,4 +42,42 @@ describe('ConsumptionCard', () => {
     const { container } = render(<BenificiaryList {...benificiaryListProps} />);
     expect(container).toBeTruthy();
   });
+
+  it('should displays "Vous mêmes" for user type beneficiaries', () => {
+    const { getByText } = render(
+      <BenificiaryList
+        beneficiaries={[
+          {
+            id: 1,
+            type: 'user',
+            firstName: 'Geralt',
+            consumption: {
+              allowedAmount: 50,
+              consumedAmount: 30,
+            },
+          },
+        ]}
+      />
+    );
+    expect(getByText('Vous mêmes')).toBeTruthy();
+  });
+
+  it('should displays the firstName for non-user type beneficiaries', () => {
+    const { getByText } = render(
+      <BenificiaryList
+        beneficiaries={[
+          {
+            id: 1,
+            type: 'companion',
+            firstName: 'Geralt',
+            consumption: {
+              allowedAmount: 50,
+              consumedAmount: 30,
+            },
+          },
+        ]}
+      />
+    );
+    expect(getByText('Geralt')).toBeTruthy();
+  });
 });
