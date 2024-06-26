@@ -13,6 +13,7 @@ export const GiftDetails = ({
   openingDate,
   consumedAmount,
   description,
+  state,
 }: GiftDetailsProps) => {
   return (
     <div className="space-y-6">
@@ -22,6 +23,7 @@ export const GiftDetails = ({
         consumedAmount={consumedAmount}
         name={name}
         openingDate={openingDate}
+        state={state}
       />
       <Alert title="Description de la carte cadeau" message={description} />
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">

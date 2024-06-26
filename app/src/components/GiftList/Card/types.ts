@@ -6,6 +6,7 @@ export type GiftCard = {
   allowedAmount: Gift['allowedAmount'];
   consumedAmount: Gift['consumedAmount'];
   closingDate: Gift['closingDate'];
+  state: Gift['state'];
 };
 
 export type CardProps = GiftCard;

@@ -10,6 +10,7 @@ const headerProps: HeaderProps = {
   closingDate: '2025-05-10',
   name: 'Gift card',
   openingDate: '2021-05-10',
+  state: 'active',
 };
 
 describe('Header', () => {

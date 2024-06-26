@@ -6,4 +6,5 @@ export type HeaderProps = {
   consumedAmount: Gift['consumedAmount'];
   openingDate: Gift['openingDate'];
   closingDate: Gift['closingDate'];
+  state: Gift['state'];
 };

@@ -1,10 +1,12 @@
 import { ProgressBar } from '@/components/common/ProgressBar';
+import { buildPassedTimeString, buildRemainingTimeString } from '@/utils/dates';
 
 import CalendarIcon from '@/assets/icons/calendar.svg?react';
 import ClockIcon from '@/assets/icons/clock.svg?react';
 import GiftCardIcon from '@/assets/icons/gift-card.svg?react';
 
 import { HeaderProps } from './types';
+import { useMemo } from 'react';
 
 export const Header = ({
   allowedAmount,
@@ -12,7 +14,14 @@ export const Header = ({
   name,
   openingDate,
   closingDate,
+  state,
 }: HeaderProps) => {
+  const closingText = useMemo(() => {
+    console.log('state', state);
+    if (state === 'archived') return buildPassedTimeString(closingDate);
+    return buildRemainingTimeString(closingDate);
+  }, [closingDate, state]);
+
   return (
     <div>
       <div className="flex size-8 items-center justify-center rounded-lg bg-pink-100 sm:size-16">
@@ -30,7 +39,7 @@ export const Header = ({
           </p>
           <p className="flex items-center gap-x-1">
             <ClockIcon className="size-[14px] fill-current" />
-            <span>Se cloture dans 1 semaine</span>
+            <span>{closingText}</span>
           </p>
         </div>
       </div>
