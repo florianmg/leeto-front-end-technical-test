@@ -1,0 +1,1 @@
+export { GiftDetails } from './GiftDetails';
